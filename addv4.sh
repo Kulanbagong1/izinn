@@ -26,7 +26,7 @@ add-ip() {
     today=`date -d "0 days" +"%Y-%m-%d"`
     ran=$(date +%s)
     versi="3"
-    git clone https://github.com/rizkihdyt6/izinsc.git /root/ipvps/ &> /dev/null
+    git clone https://github.com/Kulanbagong1/izinn.git /root/ipvps/ &> /dev/null
     clear
     read -p "Input IP Address : " ip
     CLIENT_EXISTS=$(grep -w $ip /root/ipvps/ip | wc -l)
@@ -61,14 +61,14 @@ add-ip() {
     echo "asu ${name} ${exp2} ${ip} ${versi}" >> /root/ipvps/ip
     fi
     cd /root/ipvps
-    git config --global user.email "rizkihdyt6@gmail.com" &> /dev/null
-    git config --global user.name "rizkihdyt6" &> /dev/null
+    git config --global user.email "jengkolonline323@gmail.com" &> /dev/null
+    git config --global user.name "Kulanbagong1" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/rizkihdyt6/izinsc
+    git remote add origin https://github.com/Kulanbagong1/izinn
     git push -f https://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@github.com/rizkihdyt6/izinsc.git &> /dev/null
     rm -rf /root/ipvps
     clear
@@ -86,7 +86,7 @@ add-ip() {
 
 del-ip() {
     rm -rf /root/ipvps
-    git clone https://github.com/rizkihdyt6/izinsc.git /root/ipvps/ &> /dev/null
+    git clone https://github.com/Kulanbagong1/izinn.git /root/ipvps/ &> /dev/null
     clear
     echo "List IP Address Have Been Registered"
     echo ""
@@ -102,14 +102,14 @@ del-ip() {
     sed -i "/^### $name $exp $ipdel/,/^},{/d" /root/ipvps/ip
     fi
     cd /root/ipvps
-    git config --global user.email "rizkihdyt6@gmail.com" &> /dev/null
-    git config --global user.name "rizkihdyt6" &> /dev/null
+    git config --global user.email "jengkolonline323@gmail.com" &> /dev/null
+    git config --global user.name "Kulanbagong1" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/rizkihdyt6/izinsc
+    git remote add origin https://github.com/Kulanbagong1/izinn
     git push -f https://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@github.com/rizkihdyt6/izinsc.git &> /dev/null
     rm -rf /root/ipvps
     clear
@@ -120,7 +120,7 @@ del-ip() {
 
 renew-ip() {
     rm -rf /root/ipvps
-    git clone https://github.com/rizkihdyt6/izinsc.git /root/ipvps/ &> /dev/null
+    git clone https://github.com/Kulanbagong1/izinn.git /root/ipvps/ &> /dev/null
     clear
     echo "List IP Address Have Been Registered"
     echo ""
@@ -138,14 +138,14 @@ renew-ip() {
     exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
     sed -i "s/### $name $exp $ipdel/### $name $exp4 $ipdel/g" /root/ipvps/ip
     cd /root/ipvps
-    git config --global user.email "rizkihdyt6@gmail.com" &> /dev/null
-    git config --global user.name "rizkihdyt6" &> /dev/null
+    git config --global user.email "jengkolonline323@gmail.com" &> /dev/null
+    git config --global user.name "Kulanbagong1" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/rizkihdyt6/izinsc
+    git remote add origin https://github.com/Kulanbagong1/izinn
     git push -f https://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@github.com/rizkihdyt6/izinsc.git &> /dev/null
     rm -rf /root/ipvps
     clear
