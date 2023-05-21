@@ -69,7 +69,7 @@ add-ip() {
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/Kulanbagong1/izinn
-    git push -f https://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@github.com/rizkihdyt6/izinsc.git &> /dev/null
+    git push -f https://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@github.com/Kulanbagong1/izinn.git &> /dev/null
     rm -rf /root/ipvps
     clear
     echo -e "${CYAN}Succesfully Add IP Address${NC}"
@@ -110,7 +110,7 @@ del-ip() {
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/Kulanbagong1/izinn
-    git push -f https://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@github.com/rizkihdyt6/izinsc.git &> /dev/null
+    git push -f https://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@github.com/Kulanbagong1/izinn.git &> /dev/null
     rm -rf /root/ipvps
     clear
     echo "Succesfully Deleted The IP Address"
@@ -146,7 +146,7 @@ renew-ip() {
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/Kulanbagong1/izinn
-    git push -f https://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@github.com/rizkihdyt6/izinsc.git &> /dev/null
+    git push -f https://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@github.com/Kulanbagong1/izinn.git &> /dev/null
     rm -rf /root/ipvps
     clear
     echo "Succesfully Renew The IP Address"
