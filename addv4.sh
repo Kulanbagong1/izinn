@@ -79,6 +79,13 @@ add-ip() {
     echo -e "Versi Izin      : $versi"
     echo -e "Registered On : $today"
     echo -e "Expired On    : $exp2"
+    echo -e "===================================="
+    echo -e "  >>>>> LINK INSTALL <<<<<"
+    echo -e " ini : apt install -y wget screen && apt update -y && apt upgrade -y && apt install lolcat -y && gem install lolcat && wget -q https://raw.githubusercontent.com/Kulanbagong1/vps/main/main.sh && chmod +x main.sh && screen -S install ./main.sh "
+    echo -e " update : wget https://raw.githubusercontent.com/Kulanbagong1/vps/main/update.sh && chmod +x update.sh && ./update.sh "
+    echo -e "===================================="
+    echo -e " TUNGGU 5 MENIT BARU INSTALL"
+    echo -e "===================================="
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
     addip-menu
