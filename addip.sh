@@ -21,7 +21,7 @@ CYAN='\e[36m'
 LIGHT='\033[0;37m'
 tokengit=$(cat /etc/adminip/access.conf)
 MYIP=$(wget -qO- ipinfo.io/ip);
-adminip=$( curl -sS https://raw.githubusercontent.com/PelangiSenja/allow/main/accessmenu | grep $MYIP )
+adminip=$( curl -sS https://raw.githubusercontent.com/Kulanbagong1/izinn/main/accessmenu | grep $MYIP )
 if [ $adminip = $MYIP ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -60,11 +60,11 @@ clear
 exit 0
 fi
 clear
-rm -rf /root/allow
+rm -rf /root/izinn
 read -p " - IP VPS      : " daftar
 echo -e "[ ${Lyellow}INFO${NC} ] Checking the IPVPS if Already Registered"
 sleep 1
-cek=$( curl -sS https://raw.githubusercontent.com/PelangiSenja/allow/main/ipvps.conf | awk '{print $5}' | grep $daftar )
+cek=$( curl -sS https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ipvps.conf | awk '{print $5}' | grep $daftar )
 if [[ $daftar = $cek ]]; then
 echo -e "\e[1;31m The IP VPS Has Been Registered\e[0m"
 sleep 2
@@ -97,11 +97,11 @@ fi
 
 daftarip=$(cat /root/data)
 rm -rf /root/allow
-git config --global user.email "pelangisenja2601@gmail.com"
-git config --global user.name "PelangiSenja"
-git clone https://github.com/PelangiSenja/allow.git
-mkdir /root/allow
-cd /root/allow/
+git config --global user.email "kulanbagong5@gmail.com"
+git config --global user.name "Kulanbagong1"
+git clone https://github.com/Kulanbagong1/izinn.git
+mkdir /root/izinn
+cd /root/izinn/
 rm -rf .git
 git init
 touch ipvps.conf
@@ -111,8 +111,8 @@ git init >/dev/null 2>&1
 git add .
 git commit -m register
 git branch -M main
-git remote add origin https://github.com/PelangiSenja/allow.git
-git push -f https://${tokengit}@github.com/PelangiSenja/allow.git
+git remote add origin https://github.com/Kulanbagong1/izinn.git
+git push -f https://${tokengit}@github.com/Kulanbagong1/izinn.git
 echo -e "IPVPS Registration Completed"
 sleep 1
 links1="apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot"
@@ -127,7 +127,7 @@ echo "  Order ID      : $id"
 echo "  Register Date : $hariini"
 echo "  Expired Date  : $exp"
 echo "  Client Name   : $client"
-echo "  Script Ver    : pelangisenja_MULTIPORT"
+echo "  Script Ver    : JENGKOL ONLINE"
 echo -e "\033[0;34m----------------------------------------\033[0m"
 echo " Update & Upgrade First Your VPS for Debian 10 & 11: "
 echo ""
@@ -147,7 +147,7 @@ echo -e "\033[0;34m----------------------------------------\033[0m"
 echo "  siapkan email cloud flare untuk cert xray  "
 echo "  pastikan domain dah siap2 pointing di CF ya sblm install  "
 echo -e "\033[0;34m----------------------------------------\033[0m"
-rm -rf /root/allow
+rm -rf /root/izinn
 rm -rf /root/data
 rm -rf /root/ipvps.conf
 echo ""
@@ -163,14 +163,14 @@ clear
 exit 0
 fi
 clear
-rm -rf /root/allow
+rm -rf /root/izinn
 rm -rf /root/data
 rm -rf /root/ipvps.conf
-git config --global user.email "pelangisenja2601@gmail.com"
-git config --global user.name "PelangiSenja"
-git clone https://github.com/PelangiSenja/allow.git
-mkdir /root/allow
-cd /root/allow/
+git config --global user.email "kulanbagong5@gmail.com"
+git config --global user.name "Kulanbagong1"
+git clone https://github.com/Kulanbagong1/izinn.git
+mkdir /root/izinn
+cd /root/izinn/
 rm -rf .git
 git init
 touch ipvps.conf
@@ -194,8 +194,8 @@ git init >/dev/null 2>&1
 git add .
 git commit -m delete
 git branch -M main
-git remote add origin https://github.com/PelangiSenja/allow.git
-git push -f https://${tokengit}@github.com/PelangiSenja/allow.git
+git remote add origin https://github.com/Kulanbagong1/izinn.git
+git push -f https://${tokengit}@github.com/Kulanbagong1/izinn.git
 clear
 echo -e "\033[0;34m----------------------------------------\033[0m"
 echo " Client IP Deleted Successfully"
@@ -204,7 +204,7 @@ echo " Ip VPS       : $daftar"
 echo " Order ID     : $id"
 echo " Expired Date : $exp"
 echo " Client Name  : $client"
-rm -rf /root/allow
+rm -rf /root/izinn
 rm -rf /root/data
 rm -rf /root/ipvps.conf
 echo ""
@@ -221,11 +221,11 @@ exit 0
 fi
 clear
 rm -rf /root/allow
-git config --global user.email "pelangisenja2601@gmail.com"
-git config --global user.name "PelangiSenja"
-git clone https://github.com/PelangiSenja/allow.git
-  mkdir /root/allow
-  cd /root/allow/
+git config --global user.email "kulanbagong5@gmail.com"
+git config --global user.name "Kulanbagong1"
+git clone https://github.com/Kulanbagong1/izinn.git
+  mkdir /root/izinn
+  cd /root/izinn/
   rm -rf .git
 git init
   touch ipvps.conf
@@ -268,8 +268,8 @@ sed -i "s/### $user $exp/### $user $exp4/g" /root/allow/ipvps.conf
 git add .
 git commit -m renew
 git branch -M main
-git remote add origin https://github.com/PelangiSenja/allow.git
-git push -f https://${tokengit}@github.com/PelangiSenja/allow.git
+git remote add origin https://github.com/Kulanbagong1/izinn.git
+git push -f https://${tokengit}@github.com/Kulanbagong1/izinn.git
 echo -e "IPVPS Registration Completed"
   clear
 echo -e "\033[0;34m----------------------------------------\033[0m"
@@ -281,7 +281,7 @@ echo "  Renew Date    : $now"
 echo "  Expired Date  : $exp4"
 echo "  Client Name   : $client"
 echo -e "\033[0;34m----------------------------------------\033[0m"
-rm -rf /root/allow
+rm -rf /root/izinn
 rm -rf /root/data
 rm -rf /root/ipvps.conf
 echo ""
@@ -297,13 +297,13 @@ clear
 exit 0
 fi
 clear
-rm -rf /root/allow
+rm -rf /root/izinn
 rm -rf /root/data
 rm -rf /root/ipvps.conf
-git config --global user.email "pelangisenja2601@gmail.com"
-git config --global user.name "PelangiSenja"
-git clone https://github.com/PelangiSenja/allow.git
-cd /root/allow/
+git config --global user.email "kulanbagong5@gmail.com"
+git config --global user.name "Kulanbagong1"
+git clone https://github.com/Kulanbagong1/izinn.git
+cd /root/izinn/
 rm -rf .git
 git init
 touch ipvps.conf
@@ -317,7 +317,7 @@ echo -e "    No.   CLIENT NAME   EXP DATE   IPVPS"
 echo -e "\033[0;34m----------------------------------------\033[0m"
 grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 2-5 | awk '{print $4,$3,$1}' | nl -s '. ' 
 echo -e "\033[0;34m----------------------------------------\033[0m"
-rm -rf /root/allow
+rm -rf /root/izinn
 rm -rf /root/data
 rm -rf /root/ipvps.conf
 echo ""
