@@ -91,6 +91,10 @@ add-ip() {
     echo -e "===================================="
     echo -e " TUNGGU 5 MENIT BARU INSTALL"
     echo -e "===================================="
+    echo -e " INSTALL SECRIPT JENGKOLONLINE"
+    echo -e "====================================="
+    echo -e " wget --no-check-certificate https://raw.githubusercontent.com/Kulanbagong1/scvip/main/ub20.sh && chmod +x ub20.sh && ./ub20.sh "
+    echo -e "====================================="
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
     addip-menu
