@@ -105,7 +105,7 @@ cd /root/izinn/
 rm -rf .git
 git init
 touch ipvps.conf
-echo "$daftarip" >> /root/allow/ipvps.conf
+echo "$daftarip" >> /root/izinn/ipvps.conf
 echo -e "Client IP VPS Add Successfully"
 git init >/dev/null 2>&1
 git add .
@@ -182,14 +182,14 @@ echo -e "\033[0;34m----------------------------------------\033[0m"
 echo -e "\033[0;34m----------------------------------------\033[0m"
 echo -e "    No.     USER      EXP DATE    IPVPS"
 echo -e "\033[0;34m----------------------------------------\033[0m"
-grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 2-5 | nl -s '. '
+grep -E "^### " "/root/izinn/ipvps.conf" | cut -d ' ' -f 2-5 | nl -s '. '
 echo -e "\033[0;34m----------------------------------------\033[0m"
 read -rp " Please Input Number : " nombor 
-client=$(grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 2 | sed -n "${nombor}"p)
-id=$(grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 3 | sed -n "${nombor}"p)
-exp=$(grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 4 | sed -n "${nombor}"p)
-daftar=$(grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 5 | sed -n "${nombor}"p)
-sed -i '/^### '$client' '$id' '$exp' '$daftar'/d' /root/allow/ipvps.conf
+client=$(grep -E "^### " "/root/izinn/ipvps.conf" | cut -d ' ' -f 2 | sed -n "${nombor}"p)
+id=$(grep -E "^### " "/root/izinn/ipvps.conf" | cut -d ' ' -f 3 | sed -n "${nombor}"p)
+exp=$(grep -E "^### " "/root/izinn/ipvps.conf" | cut -d ' ' -f 4 | sed -n "${nombor}"p)
+daftar=$(grep -E "^### " "/root/izinn/ipvps.conf" | cut -d ' ' -f 5 | sed -n "${nombor}"p)
+sed -i '/^### '$client' '$id' '$exp' '$daftar'/d' /root/izinn/ipvps.conf
 git init >/dev/null 2>&1
 git add .
 git commit -m delete
@@ -220,7 +220,7 @@ clear
 exit 0
 fi
 clear
-rm -rf /root/allow
+rm -rf /root/izinn
 git config --global user.email "kulanbagong5@gmail.com"
 git config --global user.name "Kulanbagong1"
 git clone https://github.com/Kulanbagong1/izinn.git
@@ -234,7 +234,7 @@ clear
 echo -e "\033[0;34m----------------------------------------\033[0m"
 echo -e "\E[44;1;39m      Renew User IP VPS Registered      \E[0m"
 echo -e "\033[0;34m----------------------------------------\033[0m"
-NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/allow/ipvps.conf")
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/izinn/ipvps.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo "You have no existing clients!"
@@ -246,7 +246,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/allow/ipvps.conf")
 	echo -e "\033[0;34m----------------------------------------\033[0m"
 	echo " Select the existing client you want to renew"
 	echo -e "\033[0;34m----------------------------------------\033[0m"
- grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 2-5 | nl -s '. '
+ grep -E "^### " "/root/izinn/ipvps.conf" | cut -d ' ' -f 2-5 | nl -s '. '
   	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
 			read -rp "Select one client [1]: " CLIENT_NUMBER
@@ -255,9 +255,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/allow/ipvps.conf")
 		fi
 	done
 read -p "Expired (days): " masaaktif
-user=$(grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 5 | sed -n "${CLIENT_NUMBER}"p)
-exp=$(grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
-client=$(grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+user=$(grep -E "^### " "/root/izinn/ipvps.conf" | cut -d ' ' -f 5 | sed -n "${CLIENT_NUMBER}"p)
+exp=$(grep -E "^### " "/root/izinn/ipvps.conf" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
+client=$(grep -E "^### " "/izinn/allow/ipvps.conf" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 now=$(date +%Y-%m-%d)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
@@ -315,7 +315,7 @@ echo -e "\033[0;34m----------------------------------------\033[0m"
 ### USER  ID  VALIDITY  IPVPS
 echo -e "    No.   CLIENT NAME   EXP DATE   IPVPS"
 echo -e "\033[0;34m----------------------------------------\033[0m"
-grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 2-5 | awk '{print $4,$3,$1}' | nl -s '. ' 
+grep -E "^### " "/root/izinn/ipvps.conf" | cut -d ' ' -f 2-5 | awk '{print $4,$3,$1}' | nl -s '. ' 
 echo -e "\033[0;34m----------------------------------------\033[0m"
 rm -rf /root/izinn
 rm -rf /root/data
